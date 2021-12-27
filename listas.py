@@ -36,3 +36,11 @@ while i<len(lista)-1:
     suma=suma+lista[i]
     i=i+1
 print(suma)
+
+for n in lista:
+    suma=suma+n
+suma= suma - lista[-1]
+print(suma) 
+
+
+
