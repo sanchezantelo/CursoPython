@@ -1,20 +1,20 @@
 notas = [8,9,10]
-#agregaalfinaldelalista
+#agrega al final de la lista
 notas.append(8)
-#insertarenlalista
+#inserta en la lista en la posicion que le indico por parametro
 notas.insert(2,8)
 print(notas)
 
 numeros=[6,7,0,100,50,5]
-#ordenaelementos
+#ordena elementos
 numeros.sort()
 print(numeros)
 print(numeros[0])
 print(numeros[-1])
-#borraelemento
+#borra elemento
 del(numeros[3])
 print(numeros)
-#cantidaddeelementos
+#cantidad de elementos
 print(len(numeros))
 
 #matrices
