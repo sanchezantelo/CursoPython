@@ -6,10 +6,10 @@ conn=pymysql.connect(host="db4free.net",port=3306,user="sofiasa",passwd="Sanchez
 
 cursor=conn.cursor()
 
-idi=0
+idi=1
 for nombre,edad in personas:
     cursor.execute("INSERT INTO Personas VALUES (%s,%s,%s)",(idi,nombre,edad))
-    idi+1
+    idi= idi+1
 
 conn.commit()
 conn.close()
