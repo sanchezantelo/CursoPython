@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "c015a933-e076-4abc-bda7-a3fbdc9afc3e",
+		"name": "Curso Python",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://5000-teal-grouse-acwfyaf6.ws-us25.gitpod.io/student",
+					"protocol": "https",
+					"host": [
+						"5000-teal-grouse-acwfyaf6",
+						"ws-us25",
+						"gitpod",
+						"io"
+					],
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student-Alta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Pepe\", \r\n    \"courses\" : \"Programacion\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://5000-teal-grouse-acwfyaf6.ws-us25.gitpod.io/student",
+					"protocol": "https",
+					"host": [
+						"5000-teal-grouse-acwfyaf6",
+						"ws-us25",
+						"gitpod",
+						"io"
+					],
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student-Modificacion",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Carlos\", \r\n    \"courses\" : \"Algoritmos\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://5000-teal-grouse-acwfyaf6.ws-us25.gitpod.io/student/0",
+					"protocol": "https",
+					"host": [
+						"5000-teal-grouse-acwfyaf6",
+						"ws-us25",
+						"gitpod",
+						"io"
+					],
+					"path": [
+						"student",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student-Eliminacion",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Carlos\", \r\n    \"courses\" : \"Algoritmos\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://5000-teal-grouse-acwfyaf6.ws-us25.gitpod.io/student/0",
+					"protocol": "https",
+					"host": [
+						"5000-teal-grouse-acwfyaf6",
+						"ws-us25",
+						"gitpod",
+						"io"
+					],
+					"path": [
+						"student",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
