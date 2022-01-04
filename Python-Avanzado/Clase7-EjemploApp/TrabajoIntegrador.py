@@ -9,7 +9,7 @@ Verifica errores
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import os
-import tkinter as tk
+import tkinter as Tk
 from tkinter import messagebox
 import requests
 
@@ -52,6 +52,7 @@ def realizarPedido():
                 p=convertirDatos(p)
                 total=total+p
         total=total*precio #Precio de las empanadas (50)
+        total=round(total,2)
         if total==0:
             borrarEntrada()
         elif messagebox.askyesno("Confirmar pedido","El total de su pedido es $"+srt(total)+"¿Desea confirmar?"):
@@ -104,4 +105,18 @@ txtJq.place(x=300,y=150)
 txtJq.insert(tk.END, "0")
 txtNombre=tk.Entry()
 txtNombre.place(x=300,y=200)
-aceptar=tk.Button()
+aceptar=tk.Button(text="Aceptar",command=realizarPedido)
+cancelar=tk.Button(text="Cancelar",command=borrarEntrada)
+aceptar.place(x=100,y=250)
+cancelar.place(x=300,y=250)
+tk.Label(text="Genere el pedido!").place(x=250,y=25)
+lblCarne=tk.Label(text="Ingrese cantidad de carne: ")
+lblCarne.place(x=100,y=50)
+lblPollo=tk.Label(text="Ingrese cantidad de pollo: ")
+lblPollo.place(x=100,y=100)
+lblJq=tk.Label(text="Ingrese cantidad de jamon y queso: ")
+lblJq.place(x=100,y=150)
+lblNombre= tk.Label(text="Ingrese su nombre: ").place(x=100,y=200)
+v.mainloop()
+
+
