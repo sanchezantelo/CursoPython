@@ -9,7 +9,7 @@ Verifica errores
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import os
-import tkinter as Tk
+import tkinter as tk
 from tkinter import messagebox
 import requests
 
@@ -55,7 +55,7 @@ def realizarPedido():
         total=round(total,2)
         if total==0:
             borrarEntrada()
-        elif messagebox.askyesno("Confirmar pedido","El total de su pedido es $"+srt(total)+"¿Desea confirmar?"):
+        elif messagebox.askyesno("Confirmar pedido","El total de su pedido es $"+str(total)+"¿Desea confirmar?"):
              pedidoCantidad.insert(0,txtNombre.get())
              pedidoCantidad.append(total)
              guardarDatos(pedidoCantidad)
@@ -91,9 +91,10 @@ precio= dolarweb()
 wb=comprobarArchivo()
 
 ### VENTANA ####
-v= tk.Tk()
+v=tk.Tk()
 v.config(height=300, width=500)
 v.title("Empanadas - Delivery")
+
 txtCarne=tk.Entry()
 txtCarne.place(x=300,y=50)
 txtCarne.insert(tk.END, "0")
@@ -117,6 +118,7 @@ lblPollo.place(x=100,y=100)
 lblJq=tk.Label(text="Ingrese cantidad de jamon y queso: ")
 lblJq.place(x=100,y=150)
 lblNombre= tk.Label(text="Ingrese su nombre: ").place(x=100,y=200)
+
 v.mainloop()
 
 
